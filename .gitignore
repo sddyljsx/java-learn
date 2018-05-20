@@ -1,0 +1,7 @@
+.idea/
+log/
+*.iml
+target/
+*.log
+*.index
+*.threads
