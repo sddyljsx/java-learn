@@ -1,4 +1,4 @@
-package neal.java;
+package neal.java.cocurrent;
 
 import java.util.concurrent.locks.ReentrantLock;
 

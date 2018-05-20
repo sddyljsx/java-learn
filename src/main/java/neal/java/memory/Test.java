@@ -1,4 +1,4 @@
-package neal.java;
+package neal.java.memory;
 
 import java.util.ArrayList;
 import java.util.List;

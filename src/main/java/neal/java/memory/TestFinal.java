@@ -1,4 +1,4 @@
-package neal.java;
+package neal.java.memory;
 
 public class TestFinal {
 

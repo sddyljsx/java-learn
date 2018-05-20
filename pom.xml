@@ -14,7 +14,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>neal.java.Test</mainClass>
+                            <mainClass>neal.java.memory.Test</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

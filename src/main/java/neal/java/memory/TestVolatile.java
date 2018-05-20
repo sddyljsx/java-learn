@@ -1,4 +1,4 @@
-package neal.java;
+package neal.java.memory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
