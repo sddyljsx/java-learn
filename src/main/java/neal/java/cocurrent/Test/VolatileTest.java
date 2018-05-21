@@ -1,10 +1,10 @@
-package neal.java.cocurrent;
+package neal.java.cocurrent.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SyncTest {
-    int a = 0;
+public class VolatileTest {
+    volatile int a = 0;
 
     public void test() {
         List<Thread> threads = new ArrayList<>();
@@ -17,9 +17,8 @@ public class SyncTest {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                synchronized(this) {
-                    a++;
-                }
+
+                a++;
                 System.out.println(a);
             });
             threads.add(thread);
@@ -36,15 +35,11 @@ public class SyncTest {
                 e.printStackTrace();
             }
         }
-        try {
-            Thread.sleep(1000);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         System.out.println("----------------");
         System.out.println(a);
 
+
     }
+
 }

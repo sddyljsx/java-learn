@@ -1,8 +1,8 @@
-package neal.java.cocurrent;
+package neal.java.cocurrent.Test;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Lock {
+public class LockTest {
 
     public static void main(String[] args) throws Exception {
         ReentrantLock reentrantLock = new ReentrantLock();

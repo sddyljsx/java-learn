@@ -1,4 +1,4 @@
-package neal.java.cocurrent;
+package neal.java.cocurrent.Test;
 
 public class Main {
 
