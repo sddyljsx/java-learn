@@ -1,4 +1,4 @@
-package neal.java.HotSwap;
+package neal.java.hotswap;
 
 
 public class HotSwapClassLoader extends ClassLoader {

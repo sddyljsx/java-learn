@@ -1,4 +1,4 @@
-package neal.java.cocurrent.Test;
+package neal.java.cocurrent;
 
 import java.util.ArrayList;
 import java.util.List;

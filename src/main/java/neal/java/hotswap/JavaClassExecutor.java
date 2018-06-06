@@ -1,4 +1,4 @@
-package neal.java.HotSwap;
+package neal.java.hotswap;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
@@ -8,7 +8,7 @@ public class JavaClassExecutor {
     public static String execute(byte[] classByte) {
         HackSystem.clearBuffer();
         ClassModifier classModifier = new ClassModifier(classByte);
-        byte[] modiBytes = classModifier.modifyUTF8Constant("java/lang/System", "neal/java/HotSwap/HackSystem");
+        byte[] modiBytes = classModifier.modifyUTF8Constant("java/lang/System", "neal/java/hotswap/HackSystem");
         HotSwapClassLoader hotSwapClassLoader = new HotSwapClassLoader();
         Class clazz = hotSwapClassLoader.loadByte(modiBytes);
         try {

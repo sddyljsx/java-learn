@@ -1,4 +1,4 @@
-package neal.java.HotSwap;
+package neal.java.hotswap;
 
 public class ByteUtils {
     public static int byte2Int(byte[] b, int start, int len) {

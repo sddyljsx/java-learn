@@ -1,4 +1,4 @@
-package neal.java.Annotation;
+package neal.java.annotation;
 
 
 @Annotation.ClassName(name = "test")

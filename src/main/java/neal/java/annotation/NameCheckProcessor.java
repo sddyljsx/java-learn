@@ -1,4 +1,4 @@
-package neal.java.Annotation;
+package neal.java.annotation;
 
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;

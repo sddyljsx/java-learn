@@ -1,4 +1,4 @@
-package neal.java.HotSwap;
+package neal.java.hotswap;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
