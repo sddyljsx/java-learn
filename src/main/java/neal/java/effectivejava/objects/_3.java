@@ -1,6 +1,8 @@
-package neal.java.effectivejava;
+package neal.java.effectivejava.objects;
 
 /**
+ * Item	3:	Enforce	the	singleton	property	with	a	private
+ constructor	or	an	enum	type
  * 枚举单例
  */
 public class _3 {

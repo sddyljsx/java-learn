@@ -1,5 +1,12 @@
-package neal.java.effectivejava;
+package neal.java.effectivejava.objects;
 
+
+/**
+ * Item	 2:	 Consider	 a	 builder	 when	 faced	 with	 many
+ constructor	parameters
+
+ * Builder
+ */
 public class _2Builder {
 
     public static void main(String[] args) {

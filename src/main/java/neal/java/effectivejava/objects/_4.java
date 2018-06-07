@@ -1,7 +1,10 @@
-package neal.java.effectivejava;
+package neal.java.effectivejava.objects;
 
 
 /**
+ * Item	 4:	 Enforce	 noninstantiability	 with	 a	 private
+ constructor
+
  * 工具类不允许实例化
  */
 public class _4 {
