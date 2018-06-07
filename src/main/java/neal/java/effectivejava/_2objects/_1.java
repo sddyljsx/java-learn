@@ -10,7 +10,7 @@ import java.math.BigInteger;
 
  * 静态工厂方法
  */
-public class _1StaticFactoryMethod {
+public class _1 {
 
     //EnumSet
 
