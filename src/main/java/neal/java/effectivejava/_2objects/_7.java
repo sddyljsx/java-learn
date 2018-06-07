@@ -1,4 +1,4 @@
-package neal.java.effectivejava.objects;
+package neal.java.effectivejava._2objects;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;

@@ -1,4 +1,4 @@
-package neal.java.effectivejava.objects;
+package neal.java.effectivejava._2objects;
 
 /**
  * Item	3:	Enforce	the	singleton	property	with	a	private

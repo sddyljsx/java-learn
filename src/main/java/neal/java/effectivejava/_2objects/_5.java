@@ -1,4 +1,4 @@
-package neal.java.effectivejava.objects;
+package neal.java.effectivejava._2objects;
 
 import java.util.List;
 import java.util.Objects;

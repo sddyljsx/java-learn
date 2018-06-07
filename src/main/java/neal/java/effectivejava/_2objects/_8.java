@@ -1,6 +1,4 @@
-package neal.java.effectivejava.objects;
-
-import sun.misc.Cleaner;
+package neal.java.effectivejava._2objects;
 
 import java.io.*;
 
