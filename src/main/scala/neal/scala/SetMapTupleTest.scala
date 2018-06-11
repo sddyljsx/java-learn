@@ -60,8 +60,6 @@ object SetMapTupleTest {
     queue += 5
     queue ++= List(6,7,8)
 
-
-
     println(head)
 
 
