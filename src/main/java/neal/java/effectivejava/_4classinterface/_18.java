@@ -1,7 +1,8 @@
 package neal.java.effectivejava._4classinterface;
 
 
-import com.sun.tools.javac.util.List;
+
+import com.google.common.collect.Lists;
 
 import java.util.*;
 
@@ -56,7 +57,8 @@ public class _18 {
         InstrumentedHashSet instrumentedHashSet = new InstrumentedHashSet<String>();
         instrumentedHashSet.add("a");
         instrumentedHashSet.add("b");
-        instrumentedHashSet.addAll(List.of("a", "b"));
+        String[] array = {"a","b"};
+        instrumentedHashSet.addAll(Arrays.asList(array));
         // 6
         /**
          * public boolean addAll(Collection<? extends E> c) {
@@ -75,7 +77,8 @@ public class _18 {
         InstrumentedSet instrumentedSet = new InstrumentedSet(new HashSet<String>());
         instrumentedSet.add("a");
         instrumentedSet.add("b");
-        instrumentedSet.addAll(List.of("a", "b"));
+        String[] arrays = {"a","b"};
+        instrumentedSet.addAll(Arrays.asList(arrays));
         System.out.println(instrumentedSet.getAddCount());
 
     }
