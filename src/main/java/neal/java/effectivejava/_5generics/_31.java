@@ -1,6 +1,7 @@
 package neal.java.effectivejava._5generics;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,6 +22,27 @@ public class _31 {
     //	Private	helper	method	for	wildcard	capture
     private static <E> void swapHelper(List<E> list, int i, int j) {
         list.set(i, list.set(j, list.get(i)));
+    }
+
+    public interface Stack<E> {
+
+        void push(E e);
+
+        E pop();
+
+        boolean isEmpty();
+
+        // PECS	stands	for	producer-extends,	consumer-super.
+
+        default void pushAll(Iterable<? extends E> src) {
+            for (E e : src)
+                push(e);
+        }
+
+        default void popAll(Collection<? super E> dst) {
+            while (!isEmpty())
+                dst.add(pop());
+        }
     }
 
 
