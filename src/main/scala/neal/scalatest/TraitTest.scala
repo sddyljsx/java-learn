@@ -7,6 +7,22 @@ trait Logger{
   def log(msg:String):Unit
 }
 
+trait ExceptionLogger extends Exception with Logger{
+  def log(msg:String):Unit={
+    println(getMessage())
+  }
+}
+
+//类UnprintedException扩展自ExceptionLogger
+//注意用的是extends
+//此时ExceptionLogger父类Exception自动成为
+//UnprintedException的父类
+class UnprintedException extends ExceptionLogger{
+  override  def log(msg:String):Unit={
+    println("")
+  }
+}
+
 trait FileLogger extends Logger{
 
   val fileName:String
