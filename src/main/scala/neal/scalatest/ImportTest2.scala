@@ -1,4 +1,4 @@
-package neal.scala
+package neal.scalatest
 
 //将java.util.HashMap重命名为JavaHashMap
 import java.util.{ HashMap => JavaHashMap }

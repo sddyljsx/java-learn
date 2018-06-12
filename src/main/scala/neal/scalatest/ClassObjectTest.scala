@@ -1,4 +1,4 @@
-package neal.scala
+package neal.scalatest
 
 import scala.beans.BeanProperty
 

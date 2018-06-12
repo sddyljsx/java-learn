@@ -1,4 +1,4 @@
-package neal.scala
+package neal.scalatest
 
 /**
   *
@@ -17,7 +17,7 @@ class ImportTest(var name: String, var age: Int) {
   //内部类
   class Course(val cName: String, val gpa: Float) {
     //可以直接访问其外部类的私有成员
-    def getStudentSex(student: Student) = student.sex
+    //def getStudentSex(student: Student) = student.sex
   }
 
 }
@@ -42,22 +42,22 @@ object ImportTest {
     println(Student.uniqueStudentNo())
     val s = new Student("john", 29)
     //直接访问伴生类Student中的私有成员
-    println(s.sex)
+    //println(s.sex)
 
     val s1 = Student("john", 29)
     println(s1.name)
     println(s1.age)
 
     //使用内部类
-    val c1 = new s1.Course("Scala", 3.0f)
+   // val c1 = new s1.Course("Scala", 3.0f)
 
   }
 }
 
 
-package scala{
+package scalaa{
   //private[scala]限定Utils只能在scala及子包中使用
-  private[scala] object Utils{
+  private[scalaa] object Utils{
     def toString(x:String){
       println(x)
     }
