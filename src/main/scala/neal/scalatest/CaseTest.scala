@@ -13,9 +13,9 @@ object CaseTest {
 
 
     //case class 会自动生成apply方法，从而省去new操作
-    val p:Personb=Studentb("john",18,1024)
+    val pp:Personb=Studentb("john",18,1024)
     //match case 匹配语法
-    p  match {
+    pp  match {
       case Studentb(name,age,studentNo)=>println(name+":"+age+":"+studentNo)
       case Teacherb(name,age,teacherNo)=>println(name+":"+age+":"+teacherNo)
       case Nobodyb(name)=>println(name)
