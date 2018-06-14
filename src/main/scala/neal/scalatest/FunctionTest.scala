@@ -31,6 +31,10 @@ object FunctionTest {
     val s2=sum(1,_:Int,3)
     println(s2(2))
 
+    val yy = Array(1,2,3,4,5).foldLeft(0)((x:Int,y:Int)=>{println(x,y);x+y})
+    println(yy)
+
+
 
 
   }
