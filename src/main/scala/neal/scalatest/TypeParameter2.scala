@@ -47,6 +47,23 @@ class Pair9[T: Ordering](val first: T, val second: T) {
   }
 }
 
+class Pair10[T: Ordering](val first: T, val second: T) {
+  //引入odering到Ordered的隐式转换
+  //在查找作用域范围内的Ordering[T]的隐式值
+  //本例的话是implicit val p1=new PersonOrdering
+  //编译器看到比较方式是<的方式进行的时候，会自动进行
+  //隐式转换，转换成Ordered，然后调用其中的<方法进行比较
+  import Ordered.orderingToOrdered
+
+  def smaller = {
+    if (first < second)
+      first
+    else
+      second
+  }
+}
+
+
 object TypeParameter2 extends App {
   val p = new Pair1(Student3("摇摆少年梦"), Student3("摇摆少年梦2"))
   println(p.smaller)
@@ -58,7 +75,17 @@ object TypeParameter2 extends App {
   //不给函数指定参数，此时会查找一个隐式值，该隐式值类型为Ordering[Person],根据上下文界定的要求，该类型正好满足要求
   //因此它会作为smaller的隐式参数传入，从而调用ord.compare(first, second)方法进行比较
   println(pp.smaller)
+
+
+  val ppp = new Pair10(Person6("123"), Person6("456"))
+  println(ppp.smaller)
+
+
 }
+
+//T:M:K //这意味着在作用域中必须存在M[T]、K[T]类型的隐式值
+//T<%M<%K //这意味着在作用域中必须存在T到M、T到K的隐式转换
+//K>:T<:M //这意味着M是T类型的超类，K也是T类型的超类
 
 
 
