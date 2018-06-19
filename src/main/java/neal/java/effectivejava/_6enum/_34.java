@@ -19,7 +19,7 @@ public class _34 {
         URANUS(8.683e+25, 2.556e7),
         NEPTUNE(1.024e+26, 2.477e7);
         private final double mass;    //	In	kilograms private
-        private	final	double	radius;	//	In	meters
+        private final double radius;    //	In	meters
         private final double surfaceGravity;    //	In	m	/	s^2
         //	Universal	gravitational	constant	in	m^3	/	kg	s^2
         private static final double G = 6.67300E-11;
@@ -49,29 +49,46 @@ public class _34 {
     }
 
 
-    public	enum	Operation	{
-        PLUS("+")	{
-            public	double	apply(double	x,	double	y)	{	return	x	+	y;	}
+    public enum Operation {
+        PLUS("+") {
+            public double apply(double x, double y) {
+                return x + y;
+            }
         },
-        MINUS("-")	{
-            public	double	apply(double	x,	double	y)	{	return	x	-	y;	}
+        MINUS("-") {
+            public double apply(double x, double y) {
+                return x - y;
+            }
         },
-        TIMES("*")	{
-            public	double	apply(double	x,	double	y)	{	return	x	*	y;	}
+        TIMES("*") {
+            public double apply(double x, double y) {
+                return x * y;
+            }
         },
-        DIVIDE("/")	{
-            public	double	apply(double	x,	double	y)	{	return	x	/	y;	}
+        DIVIDE("/") {
+            public double apply(double x, double y) {
+                return x / y;
+            }
         };
-        private	final	String	symbol;
-        Operation(String	symbol)	{	this.symbol	=	symbol;	}
-        @Override	public	String	toString()	{	return	symbol;	}
-        public	abstract	double	apply(double	x,	double	y);
+        private final String symbol;
+
+        Operation(String symbol) {
+            this.symbol = symbol;
+        }
+
+        @Override
+        public String toString() {
+            return symbol;
+        }
+
+        public abstract double apply(double x, double y);
     }
 
-    public	static	void	main(String[]	args)	{
-        double	x	=	Double.parseDouble("1.23");
-        double	y	=	Double.parseDouble("2.0");
-        for	(Operation	op	:	Operation.values())System.out.printf("%f	%s	%f	=	%f%n",
-                x,	op,	y,	op.apply(x,	y));
+    public static void main(String[] args) {
+        double x = Double.parseDouble("1.23");
+        double y = Double.parseDouble("2.0");
+        for (Operation op : Operation.values())
+            System.out.printf("%f	%s	%f	=	%f%n",
+                    x, op, y, op.apply(x, y));
     }
 }
