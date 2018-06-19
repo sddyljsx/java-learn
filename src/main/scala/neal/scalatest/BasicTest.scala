@@ -83,6 +83,8 @@ object BasicTest {
         if line.trim.matches(pattern)
       ) println(file +": "+ line.trim)
 
+    def method(varargs:Int*)(more:String*) = println(varargs,more)
+    method(1,2,3,4)("one")
 
   }
 
