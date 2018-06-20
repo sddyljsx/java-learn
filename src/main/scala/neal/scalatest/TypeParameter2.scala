@@ -11,7 +11,7 @@ case class Student3(val name: String) extends Ordered[Student3] {
 }
 
 //将类型参数定义为T<:Ordered[T]
-class Pair1[T <: Ordered[T]](val first: T, val second: T) {
+class Pair1111[T <: Ordered[T]](val first: T, val second: T) {
   //比较的时候直接使用<符号进行对象间的比较
   def smaller() = {
     if (first < second)
@@ -22,8 +22,8 @@ class Pair1[T <: Ordered[T]](val first: T, val second: T) {
 }
 
 //PersonOrdering混入了Ordering，它与实现了Comparator接口的类的功能一致
-class PersonOrdering extends Ordering[Person6] {
-  override def compare(x: Person6, y: Person6): Int = {
+class PersonOrdering extends Ordering[Person66] {
+  override def compare(x: Person66, y: Person66): Int = {
     if (x.name > y.name)
       1
     else
@@ -31,7 +31,7 @@ class PersonOrdering extends Ordering[Person6] {
   }
 }
 
-case class Person6(val name: String) {
+case class Person66(val name: String) {
   println("正在构造对象:" + name)
 }
 
@@ -65,19 +65,19 @@ class Pair10[T: Ordering](val first: T, val second: T) {
 
 
 object TypeParameter2 extends App {
-  val p = new Pair1(Student3("摇摆少年梦"), Student3("摇摆少年梦2"))
+  val p = new Pair1111(Student3("摇摆少年梦"), Student3("摇摆少年梦2"))
   println(p.smaller)
 
 
   //定义一个隐式值，它的类型为Ordering[Person]
   implicit val p1 = new PersonOrdering
-  val pp = new Pair9(Person6("123"), Person6("456"))
+  val pp = new Pair9(Person66("123"), Person66("456"))
   //不给函数指定参数，此时会查找一个隐式值，该隐式值类型为Ordering[Person],根据上下文界定的要求，该类型正好满足要求
   //因此它会作为smaller的隐式参数传入，从而调用ord.compare(first, second)方法进行比较
   println(pp.smaller)
 
 
-  val ppp = new Pair10(Person6("123"), Person6("456"))
+  val ppp = new Pair10(Person66("123"), Person66("456"))
   println(ppp.smaller)
 
 

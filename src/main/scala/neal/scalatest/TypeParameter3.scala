@@ -23,7 +23,7 @@ object TypeParameter3 {
 }
 
 //声明逆变
-class Person2[-A]{ def test(x:A){} }
+class Person22[-A]{ def test(x:A){} }
 
 //声明协变，但会报错
 //covariant type A occurs in contravariant position in type A of value x

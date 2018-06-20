@@ -1,7 +1,7 @@
 package neal.scalatest
 
 
-class A {
+class AA {
   //下面 self =>  定义了this的别名，它是self type的一种特殊形式
   //这里的self并不是关键字，可以是任何名称
   self =>
@@ -27,7 +27,7 @@ trait X {
   def foo()
 }
 
-class B {
+class BB {
   self: X =>
 }
 
@@ -45,7 +45,7 @@ object SelfTypeDemo extends App {
 object SelfTypeTest {
 
   def main(args: Array[String]): Unit = {
-    println(new A().foo)
+    println(new AA().foo)
     val out = new OuterClassa
     val inner = new out.InnerClassa()
     inner.p
