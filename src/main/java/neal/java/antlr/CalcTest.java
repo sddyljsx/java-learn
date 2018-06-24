@@ -24,5 +24,7 @@ public class CalcTest {
         System.out.println(eval.visit(tree));
         System.out.println(tree.toStringTree(parser));
 
+        System.out.println(eval instanceof CalcVisitor);
+
     }
 }
