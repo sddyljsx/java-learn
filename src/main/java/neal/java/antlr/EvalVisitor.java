@@ -68,6 +68,7 @@ public class EvalVisitor extends CalcBaseVisitor<Double> {
 
     @Override
     public Double visitParens(CalcParser.ParensContext ctx) {
+        System.out.println("visitor parens");
         return visit(ctx.expr());
 
     }
@@ -94,7 +95,7 @@ public class EvalVisitor extends CalcBaseVisitor<Double> {
 
     @Override
     public Double visitAddSub(CalcParser.AddSubContext ctx) {
-        System.out.println("visitor ass sub");
+        System.out.println("visitor add sub");
 
         Double left = visit(ctx.expr().get(0));
         Double right = visit(ctx.expr().get(1));
