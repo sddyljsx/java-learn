@@ -21,7 +21,7 @@ public class CalcTest {
         CalcParser parser = new CalcParser(tokens);
         ParseTree tree = parser.prog();
         EvalVisitor eval = new EvalVisitor();
-        eval.visit(tree);
+        System.out.println(eval.visit(tree));
         System.out.println(tree.toStringTree(parser));
 
     }
