@@ -46,6 +46,7 @@ public class EvalVisitor extends CalcBaseVisitor<Double> {
     @Override
     public Double visitProg(CalcParser.ProgContext ctx) {
         System.out.println("visitor prog");
+        //return super.visit(ctx.stat().get(0));
         return super.visitProg(ctx);
     }
 
