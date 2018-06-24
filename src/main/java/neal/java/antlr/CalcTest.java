@@ -13,7 +13,7 @@ public class CalcTest {
 
     public static void main(String[] args) {
 
-        String expr = "(2+2)*3+1";
+        String expr = "(2+2)*3+1*3";
         //对每一个输入的字符串，构造一个 ANTLRStringStream 流 in
         ANTLRInputStream in = new ANTLRInputStream(expr);
         CalcLexer lexer = new CalcLexer(in);
