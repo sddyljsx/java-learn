@@ -28,7 +28,7 @@ public class EvalVisitor extends CalcBaseVisitor<Double> {
         DecimalFormat df = new DecimalFormat("#.##");
         String s_value = df.format(value);
         System.out.println(s_value);
-        return 0.0;
+        return 9999.0;
     }
 
     // print
