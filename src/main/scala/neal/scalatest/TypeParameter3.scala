@@ -196,6 +196,22 @@ object NonVariance {
       140,
       134)
 
+    val community_web_domain = List(561
+      , 569
+      , 599
+      , 527
+      , 549
+      , 530
+      , 130
+      , 553
+      , 557
+      , 535
+      , 540
+      , 122
+      , 565
+      , 544
+      , 548)
+
     val web_map = Map(
       507 -> 331025,
       120 -> 3518550,
@@ -289,6 +305,27 @@ object NonVariance {
       "5a0a940105e8a",
       "5a7840c115d31",
       "5ab4a5b514aa6")
+
+    val community_app_domain = List(
+      "5857b592b6db1",
+      "58c215ab35565",
+      "58df2c7637b14",
+      "58df2c66ba0c1",
+      "58df2c7ebe7a9",
+      "5acedd75ad076",
+      "5aceddd995f60",
+      "5acedecca01c0",
+      "5acede75c3e9f",
+      "5acedf0b00434",
+      "5acedfbf710a4",
+      "5acedfefc4b70",
+      "5acee034a6033",
+      "5acee07f19922",
+      "5acee0faa7613",
+      "5acee17054f85",
+      "5acee18b8b92d",
+      "5341748931928"
+    )
 
     val app_map = Map("5a5da9b44bcd5" -> 1,
       "58df2c66ba0c1" -> 1625448,
@@ -397,7 +434,10 @@ object NonVariance {
 
     println(web_map.filterKeys(x => web_domain.contains(x)).values.sum + app_map.filterKeys(x => app_domain.contains(x.trim)).values.sum)
 
+    println(web_map.filterKeys(x => community_web_domain.contains(x)).values.sum + app_map.filterKeys(x => community_app_domain.contains(x.trim)).values.sum)
 
+    println(web_map.filterKeys(x => community_web_domain.contains(x)))
+    println(app_map.filterKeys(x => community_app_domain.contains(x)))
   }
 }
 
