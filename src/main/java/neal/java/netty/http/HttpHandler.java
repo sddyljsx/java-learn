@@ -15,7 +15,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> { 
         System.out.println("class:" + msg.getClass().getName());
         DefaultFullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
                 HttpResponseStatus.OK,
-                Unpooled.wrappedBuffer("test".getBytes())); // 2
+                Unpooled.wrappedBuffer("hello".getBytes())); // 2
 
         HttpHeaders heads = response.headers();
         heads.add(HttpHeaderNames.CONTENT_TYPE, contentType + "; charset=UTF-8");
