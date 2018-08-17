@@ -24,6 +24,12 @@ object ListTest {
 Similarly [B <: A] is an upper type bound, meaning that B is constrained to be a subtype of A
       */
 
+    println("a")
+    val a = Nil
+    a.map(x=>print(x))
+    println(a)
+    println("b")
+
   }
 
 }
